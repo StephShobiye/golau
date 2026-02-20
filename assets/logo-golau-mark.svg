@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 240 240" role="img" aria-label="Golau Insight Ltd mark">
+  <title>Golau Insight Ltd</title>
+
+  <circle cx="120" cy="120" r="106" fill="none" stroke="#C9A227" stroke-width="8"/>
+
+  <!-- Central beam -->
+  <path d="M114 46
+           C114 36 126 36 126 46
+           L126 168
+           C126 178 114 178 114 168
+           Z"
+        fill="#C9A227"/>
+
+  <!-- Base split -->
+  <path d="M98 182
+           C108 172 132 172 142 182
+           C132 192 108 192 98 182
+           Z"
+        fill="#C9A227"/>
+
+  <!-- Rays -->
+  <path d="M72 84 L104 106 L96 114 L64 92 Z" fill="#C9A227"/>
+  <path d="M168 84 L176 92 L144 114 L136 106 Z" fill="#C9A227"/>
+  <path d="M82 136 L112 126 L114 136 L84 148 Z" fill="#C9A227"/>
+  <path d="M158 136 L156 148 L126 136 L128 126 Z" fill="#C9A227"/>
+</svg>
