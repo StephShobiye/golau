@@ -1,1 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Golau Insight Ltd</title>
+  <meta name="description" content="Contact Golau Insight Ltd to enquire about availability." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img src="assets/logo-golau.svg" alt="Golau logo" />
+          <div class="title">
+            <strong>Golau Insight Ltd</strong>
+            <span>Light, clarity, strategy</span>
+          </div>
+        </a>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="hero">
+      <span class="kicker">Contact</span>
+      <h1>Enquire about availability</h1>
+      <p>
+        Email is best for first contact. Please include a short summary of what you need and your preferred timeframe.
+      </p>
+      <div class="card" style="margin-top:18px;">
+        <h2>Email</h2>
+        <p style="font-size:18px; margin: 8px 0 0;">
+          <a href="mailto:hello@golauinsight.co.uk">hello@golauinsight.co.uk</a>
+        </p>
+        <p class="small" style="margin-top:10px;">
+          We respond as quickly as possible during working days.
+        </p>
+        <hr class="sep" />
+        <h2>Scope note</h2>
+        <p class="small">
+          This is strategic advisory, not therapy, crisis counselling, or legal representation.
+          If emotional distress is central, therapeutic support is recommended.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        © <span id="y"></span> Golau Insight Ltd · <a href="services.html">Services</a>
+      </div>
+      <div class="small" style="margin-top:8px;">
+        golauinsight.co.uk · hello@golauinsight.co.uk
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
