@@ -207,3 +207,15 @@ hr.sep{
   border-top: 1px solid var(--border);
   margin: 14px 0;
 }
+
+.brand img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+
+
+
+
+
