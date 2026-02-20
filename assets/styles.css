@@ -229,6 +229,11 @@ hr.sep{
   filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.15));
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 
 
 
