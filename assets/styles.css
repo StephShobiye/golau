@@ -606,3 +606,97 @@ small {
     padding: 1.5rem;
   }
 }
+/* =========================================
+   Body background with soft tonal movement
+   while keeping clean readable content boxes
+   ========================================= */
+
+:root {
+  --emerald-deep: #1f4b3a;
+  --emerald-mid: #3f6a55;
+  --olive-soft: #7d8d6d;
+  --cream: #f4efe3;
+  --cream-box: rgba(250, 247, 240, 0.9);
+  --gold-soft: #bfa06a;
+  --charcoal: #2b2b2b;
+  --border-soft: rgba(43, 43, 43, 0.08);
+  --shadow-soft: 0 10px 30px rgba(25, 35, 28, 0.08);
+}
+
+/* Full page background */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--charcoal);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(191, 160, 106, 0.12) 0%, transparent 24%),
+    radial-gradient(circle at 82% 18%, rgba(63, 106, 85, 0.14) 0%, transparent 28%),
+    radial-gradient(circle at 50% 58%, rgba(244, 239, 227, 0.7) 0%, transparent 34%),
+    linear-gradient(180deg, #ece5d7 0%, #e4ddcc 32%, #d9dcca 62%, #e8e2d4 100%);
+  background-attachment: fixed;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Optional subtle page texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.7) 0.8px, transparent 1px);
+  background-size: 8px 8px;
+  mix-blend-mode: soft-light;
+}
+
+/* Main section wrapper */
+.section {
+  padding: 5rem 0;
+}
+
+/* Text boxes / cards */
+.content-box,
+.card,
+.panel {
+  background: var(--cream-box);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  padding: 2rem;
+}
+
+/* Alternate slightly richer box if needed */
+.content-box.alt,
+.card.alt,
+.panel.alt {
+  background: rgba(255, 252, 246, 0.82);
+}
+
+/* Headings inside boxes */
+.content-box h2,
+.card h2,
+.panel h2,
+.content-box h3,
+.card h3,
+.panel h3 {
+  color: var(--emerald-deep);
+  font-family: "Georgia", serif;
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+/* Paragraphs */
+.content-box p,
+.card p,
+.panel p {
+  color: var(--charcoal);
+}
+
+/* Section spacing for stacked boxes */
+.stack-lg > * + * {
+  margin-top: 1.5rem;
+}
