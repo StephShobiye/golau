@@ -1,7 +1,11 @@
 /* =========================================================
    Golau Insight Ltd - single commit stylesheet
-   Dramatic hero + graduated body background + clear content boxes
+   Updated emerald–olive hero + unified navigation + buttons
    ========================================================= */
+
+/* =========================
+   Variables
+   ========================= */
 
 :root {
   --emerald-dark: #173d30;
@@ -141,14 +145,18 @@ small {
 }
 
 /* =========================
-   Header / Navigation
+   Header / Navigation (Updated H2)
    ========================= */
 
 .site-header {
   position: relative;
   z-index: 12;
-  background: linear-gradient(180deg, rgba(11, 40, 31, 0.9) 0%, rgba(19, 61, 48, 0.8) 100%);
-  border-bottom: 1px solid rgba(194, 161, 102, 0.2);
+  background: linear-gradient(
+    180deg,
+    rgba(31, 75, 58, 0.92) 0%,
+    rgba(47, 95, 76, 0.88) 100%
+  );
+  border-bottom: 1px solid rgba(194, 161, 102, 0.25);
   backdrop-filter: blur(4px);
 }
 
@@ -222,15 +230,25 @@ small {
 }
 
 /* =========================
-   Hero
+   HERO (Updated to approved emerald–olive)
    ========================= */
 
 .hero-wrap {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 24%, rgba(255, 247, 212, 0.9) 0%, rgba(235, 225, 177, 0.55) 16%, rgba(108, 140, 86, 0.18) 36%, rgba(21, 68, 51, 0.82) 70%, rgba(10, 38, 30, 0.96) 100%),
-    linear-gradient(180deg, #114131 0%, #1f5d45 55%, #134332 100%);
+    radial-gradient(circle at 50% 28%,
+      rgba(245, 242, 232, 0.92) 0%,
+      rgba(235, 229, 210, 0.55) 18%,
+      rgba(47, 95, 76, 0.22) 38%,
+      rgba(21, 68, 51, 0.88) 72%,
+      rgba(10, 38, 30, 0.96) 100%
+    ),
+    linear-gradient(180deg,
+      #2F5A47 0%,
+      #3A6A52 45%,
+      #1F4B3A 100%
+    );
   color: var(--cream);
 }
 
@@ -238,7 +256,12 @@ small {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7, 26, 20, 0.55) 0%, rgba(7, 26, 20, 0.08) 24%, rgba(7, 26, 20, 0.18) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 240, 0.18) 0%,
+    rgba(255, 255, 240, 0.04) 40%,
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -248,7 +271,10 @@ small {
   inset: 0;
   opacity: 0.12;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0.8px, transparent 1px);
+  background-image: radial-gradient(circle,
+    rgba(255, 255, 255, 0.35) 0.8px,
+    transparent 1px
+  );
   background-size: 8px 8px;
   mix-blend-mode: soft-light;
 }
@@ -262,6 +288,7 @@ small {
   text-align: center;
 }
 
+/* Eyebrow preserved */
 .hero .eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
@@ -279,7 +306,7 @@ small {
 .hero h1 {
   max-width: 980px;
   margin-inline: auto;
-  color: #f8f3e7;
+  color: #F5F2E8;
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.28);
 }
 
@@ -297,8 +324,8 @@ small {
   margin: 0 auto 2.4rem;
   font-size: 1.14rem;
   line-height: 1.72;
-  color: rgba(248, 243, 231, 0.96);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+  color: var(--charcoal);
+  text-shadow: none;
 }
 
 .hero-actions {
@@ -312,12 +339,12 @@ small {
 .hero-note {
   margin-top: 2.5rem;
   font-size: 0.98rem;
-  color: rgba(247, 241, 223, 0.92);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+  color: var(--charcoal);
+  text-shadow: none;
 }
 
 /* =========================
-   Buttons
+   Buttons (Updated)
    ========================= */
 
 .btn {
@@ -348,15 +375,15 @@ small {
 }
 
 .btn-primary {
-  background: linear-gradient(180deg, #1d5a43 0%, #123d2f 100%);
-  color: #f7f1df;
-  border-color: var(--gold-soft);
+  background: #2F5A47;
+  color: #F5F2E8;
+  border: 2px solid var(--gold-soft);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background: linear-gradient(180deg, #23684d 0%, #154635 100%);
-  color: #f7f1df;
+  background: var(--gold-soft);
+  color: var(--emerald-deep);
 }
 
 .btn-secondary {
@@ -464,228 +491,4 @@ main h1:not(.hero h1) {
 
 /* =========================
    Feature list
-   ========================= */
-
-.feature-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.feature-list li {
-  position: relative;
-  padding-left: 1.4rem;
-  margin-bottom: 0.85rem;
-  color: var(--charcoal-soft);
-}
-
-.feature-list li::before {
-  content: "";
-  position: absolute;
-  top: 0.72rem;
-  left: 0;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--gold-soft);
-}
-
-/* =========================
-   Pullquote / statement
-   ========================= */
-
-.statement {
-  max-width: 880px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.statement p {
-  font-size: 1.08rem;
-}
-
-.pullquote {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 2rem;
-  border-left: 4px solid var(--gold-soft);
-  background: var(--cream-soft);
-  border-radius: 0 var(--radius-soft) var(--radius-soft) 0;
-  box-shadow: var(--shadow-soft);
-}
-
-.pullquote p {
-  font-size: 1.08rem;
-  margin: 0;
-  color: var(--charcoal);
-}
-
-.kicker {
-  color: var(--gold-deep);
-  font-size: 0.84rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.8rem;
-  display: inline-block;
-}
-
-/* =========================
-   CTA band
-   ========================= */
-
-.cta-band {
-  background: linear-gradient(135deg, var(--emerald-dark) 0%, var(--emerald-mid) 100%);
-  color: var(--cream);
-  padding: 4.25rem 0;
-  border-top: 1px solid rgba(194, 161, 102, 0.22);
-  border-bottom: 1px solid rgba(194, 161, 102, 0.22);
-}
-
-.cta-band h2,
-.cta-band p {
-  color: var(--cream);
-}
-
-.cta-band .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.cta-band .text {
-  max-width: 760px;
-}
-
-.cta-band .text p:last-child {
-  margin-bottom: 0;
-}
-
-/* =========================
-   Footer
-   ========================= */
-
-.footer {
-  background: var(--emerald-dark);
-  color: var(--cream);
-  border-top: 2px solid var(--gold-soft);
-  padding: 3rem 0 2.5rem;
-}
-
-.footer .container {
-  text-align: center;
-}
-
-.footer nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  margin-bottom: 1.6rem;
-}
-
-.footer a {
-  color: var(--gold-soft);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.footer a:hover,
-.footer a:focus {
-  color: var(--cream);
-}
-
-.footer hr {
-  width: 120px;
-  height: 1px;
-  border: 0;
-  background-color: var(--gold-soft);
-  margin: 1.6rem auto;
-}
-
-.footer p,
-.footer small {
-  color: rgba(244, 239, 227, 0.9);
-  margin-bottom: 0;
-}
-
-/* =========================
-   Utility
-   ========================= */
-
-.text-center {
-  text-align: center;
-}
-
-.max-narrow {
-  max-width: 760px;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-/* =========================
-   Responsive
-   ========================= */
-
-@media (max-width: 980px) {
-  .grid-3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .cta-band .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.15rem 0;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.95rem;
-    width: 100%;
-  }
-
-  .hero {
-    padding: 5rem 0 4.8rem;
-    text-align: left;
-  }
-
-  .hero h1,
-  .hero p {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .hero hr {
-    margin-left: 0;
-  }
-
-  .hero-actions {
-    justify-content: flex-start;
-  }
-
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 4.2rem 0;
-  }
-
-  .pullquote {
-    padding: 1.5rem;
-  }
-}
+   =================
